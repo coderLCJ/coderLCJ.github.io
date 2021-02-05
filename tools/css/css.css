@@ -1,0 +1,40 @@
+h4{
+	color: gray;
+} 
+
+table{
+	width:75%; 
+	color:darkred;
+}
+
+li{
+	font-style: italic;
+}
+
+.content{
+	background: #CAD8D7;
+	padding: 60px 100px; 
+}
+
+.content_1{
+	background: #D1E9E9;
+	padding: 20px;
+}
+.content_2{
+	background: #D1E9E9;
+	padding: 20px;
+	margin-top: 40px;
+} 
+
+.content_3{
+	background: #D1E9E9;
+	padding: 20px;
+	margin-top: 40px;
+}
+ 
+.button{
+	width: 20%;
+	border-radius: 10px;
+	background: #6C6C6C;
+}
+ 
