@@ -6,23 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://coderLCJ.github.io">
-  <title>Github+hexo搭建个人博客 | Laity&#39;s world</title>
+  <title>深度学习总结 | Laity&#39;s world</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、前言    很多朋友觉得做一个属于自己的网站是一件很酷的事，但也是一件比较困难的事，知乎、CSDN上有很多类似“20分钟手把手教你搭建属于自己的博客”的文章，不过内容都太过于繁琐，或者对于各种可能出现的bug没有留下解决方案，所以大多数人建好是需要花一段时间的。">
-<meta name="keywords" content="hexo,教程">
+  <meta name="description" content="一、基础篇为什么使用激活函数  a. 不使用激活函数，每一层输出都是上层输入的线性函数，无论神经网络有多少层，输出都是输入的线性组合。b. 使用激活函数，能够给神经元引入非线性因素，使得神经网络可以任意逼近任何非线性函数，这样神经网络就可以利用到更多的非线性模型中。 激活函数需要具备以下几点性质: 1. 连续并可导（允许少数点上不可导）的非线性函数。可导的激活函数可以直接利用数值优化的方法来学习网">
+<meta name="keywords" content="深度学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github+hexo搭建个人博客">
-<meta property="og:url" content="http://coderLCJ.github.io/2018/04/01/搭建一个属于自己的博客/index.html">
+<meta property="og:title" content="深度学习总结">
+<meta property="og:url" content="http://coderLCJ.github.io/2021/09/21/深度学习总结/index.html">
 <meta property="og:site_name" content="Laity&#39;s world">
-<meta property="og:description" content="一、前言    很多朋友觉得做一个属于自己的网站是一件很酷的事，但也是一件比较困难的事，知乎、CSDN上有很多类似“20分钟手把手教你搭建属于自己的博客”的文章，不过内容都太过于繁琐，或者对于各种可能出现的bug没有留下解决方案，所以大多数人建好是需要花一段时间的。">
+<meta property="og:description" content="一、基础篇为什么使用激活函数  a. 不使用激活函数，每一层输出都是上层输入的线性函数，无论神经网络有多少层，输出都是输入的线性组合。b. 使用激活函数，能够给神经元引入非线性因素，使得神经网络可以任意逼近任何非线性函数，这样神经网络就可以利用到更多的非线性模型中。 激活函数需要具备以下几点性质: 1. 连续并可导（允许少数点上不可导）的非线性函数。可导的激活函数可以直接利用数值优化的方法来学习网">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://coderlcj.github.io/2018/04/01/搭建一个属于自己的博客/github.jpg">
-<meta property="og:image" content="http://coderlcj.github.io/2018/04/01/搭建一个属于自己的博客/hexo.jpg">
-<meta property="og:updated_time" content="2019-11-12T11:23:28.000Z">
+<meta property="og:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210921143136412.png">
+<meta property="og:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210921142953011.png">
+<meta property="og:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210921143038754.png">
+<meta property="og:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210921143412169.png">
+<meta property="og:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210921143503000.png">
+<meta property="og:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210921143922327.png">
+<meta property="og:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210911151629886.png">
+<meta property="og:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210921145836878.png">
+<meta property="og:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210921144945193.png">
+<meta property="og:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210921145017689.png">
+<meta property="og:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210921200217208.png">
+<meta property="og:updated_time" content="2021-09-21T12:18:55.853Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Github+hexo搭建个人博客">
-<meta name="twitter:description" content="一、前言    很多朋友觉得做一个属于自己的网站是一件很酷的事，但也是一件比较困难的事，知乎、CSDN上有很多类似“20分钟手把手教你搭建属于自己的博客”的文章，不过内容都太过于繁琐，或者对于各种可能出现的bug没有留下解决方案，所以大多数人建好是需要花一段时间的。">
-<meta name="twitter:image" content="http://coderlcj.github.io/2018/04/01/搭建一个属于自己的博客/github.jpg">
+<meta name="twitter:title" content="深度学习总结">
+<meta name="twitter:description" content="一、基础篇为什么使用激活函数  a. 不使用激活函数，每一层输出都是上层输入的线性函数，无论神经网络有多少层，输出都是输入的线性组合。b. 使用激活函数，能够给神经元引入非线性因素，使得神经网络可以任意逼近任何非线性函数，这样神经网络就可以利用到更多的非线性模型中。 激活函数需要具备以下几点性质: 1. 连续并可导（允许少数点上不可导）的非线性函数。可导的激活函数可以直接利用数值优化的方法来学习网">
+<meta name="twitter:image" content="http://coderlcj.github.io/2021/09/21/深度学习总结/Users/29078/AppData/Roaming/Typora/typora-user-images/image-20210921143136412.png">
   
     <link rel="alternative" href="/atom.xml" title="Laity&#39;s world" type="application/atom+xml">
   
@@ -166,58 +175,92 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-搭建一个属于自己的博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-深度学习总结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Github+hexo搭建个人博客
+      深度学习总结
     </h1>
   
 
         
-        <a href="/2018/04/01/搭建一个属于自己的博客/" class="archive-article-date">
-  	<time datetime="2018-04-01T06:26:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
+        <a href="/2021/09/21/深度学习总结/" class="archive-article-date">
+  	<time datetime="2021-09-21T12:12:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3>一、前言 </h3>
-
-
-<p>很多朋友觉得做一个属于自己的网站是一件很酷的事，但也是一件比较困难的事，知乎、CSDN上有很多类似“20分钟手把手教你搭建属于自己的博客”的文章，不过内容都太过于繁琐，或者对于各种可能出现的bug没有留下解决方案，所以大多数人建好是需要花一段时间的。<a id="more"></a><br>此篇文章仅代表本人在基于hexo+github建立博客时总结的要点，详细教程请google,搭建时建议备份各项源代码，我根据网上的教程用了一下午的时间才完成个人博客的建立（包括主题、js等文件的配置），话不多说，接下来分享我的步骤。</p>
-<h3>二、配置Github </h3>
-
-<p>登录<em>github</em>,新建仓库<br><img src="/2018/04/01/搭建一个属于自己的博客/github.jpg" alt="github"><br>仓库名如下填写<br><em>yourname.github.io</em><br><em>yourname</em>与你的注册用户名一致,这个就是你博客的域名了,你的博客将从这个地址开始。</p>
-<h3>三、环境安装（node、git） </h3>
-
-<ul>
-<li>安装 Node.js（此步较简单，网上有教程，不过多阐述）</li>
-<li><p>安装 Hexo。所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo</p>
+        <h3 id="一、基础篇"><a href="#一、基础篇" class="headerlink" title="一、基础篇"></a>一、基础篇</h3><h5 id="为什么使用激活函数"><a href="#为什么使用激活函数" class="headerlink" title="为什么使用激活函数"></a>为什么使用激活函数</h5><hr>
 <blockquote>
-<p><code>$ npm install -g hexo-cli</code><br># 因为你初始化hexo 之后source目录下自带一篇hello world文章, 所以直接执行下方命令<br><code>$ hexo generate</code><br># 启动本地服务器<br><code>$ hexo server</code><br># 在浏览器输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就可以看见网页和模板了<br><code>INFO  Start processing</code><br><code>INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code><br>效果如下<br><img src="/2018/04/01/搭建一个属于自己的博客/hexo.jpg" alt="初始页面"></p>
-</blockquote>
-</li>
-<li><p>重新打开CMD，输入：<br><code>ssh-keygen -t rsa -C &quot;Github的注册邮箱地址&quot;</code><br>直接enter到底，之后在github Add SSH key 即可。</p>
-</li>
-</ul>
-<h3>四、配置博客 </h3>
-
+<p>a. 不使用激活函数，每一层输出都是上层输入的线性函数，无论神经网络有多少层，输出都是输入的线性组合。<br>b. 使用激活函数，能够给神经元引入非线性因素，使得神经网络可以任意逼近任何非线性函数，这样神经网络就可以利用到更多的非线性模型中。</p>
+<p>激活函数需要具备以下几点性质:</p>
+<pre><code>1. 连续并可导（允许少数点上不可导）的非线性函数。可导的激活函数可以直接利用数值优化的方法来学习网络参数。
+2. 激活函数及其导函数要尽可能的简单，有利于提高网络计算效率。
+3. 激活函数的导函数的值域要在一个合适的区间内，不能太大也不能太小，否则会影响训练的效率和稳定性。 
+</code></pre></blockquote>
+<a id="more"></a>
+<h5 id="常用激活函数"><a href="#常用激活函数" class="headerlink" title="常用激活函数"></a>常用激活函数</h5><hr>
 <blockquote>
-<p># Hexo Configuration<br>## Docs: <a href="http://hexo.io/docs/configuration.html" target="_blank" rel="noopener">http://hexo.io/docs/configuration.html</a><br>## Source: <a href="https://github.com/hexojs/hexo/" target="_blank" rel="noopener">https://github.com/hexojs/hexo/</a><br># Site #站点信息<br>title:  #标题<br>subtitle:  #副标题<br>description:  #站点描述，给搜索引擎看的<br>author:  #作者<br>email:  #电子邮箱<br>language: zh-CN #语言<br># URL #链接格式<br>url:  #网址<br>root: / #根目录<br>permalink: :year/:month/:day/:title/ #文章的链接格式<br>tag_dir: tags #标签目录<br>archive_dir: archives #存档目录<br>category_dir: categories #分类目录<br>code_dir: downloads/code<br>permalink_defaults:<br># Directory #目录<br>source_dir: source #源文件目录<br>public_dir: public #生成的网页文件目录<br># Writing #写作<br>new_post_name: :title.md #新文章标题<br>default_layout: post #默认的模板，包括 post、page、photo、draft（文章、页面、照片、草稿）<br>titlecase: false #标题转换成大写<br>external_link: true #在新选项卡中打开连接<br>filename_case: 0<br>render_drafts: false<br>post_asset_folder: false<br>relative_link: false<br>highlight: #语法高亮<br>  enable: true #是否启用<br>  line_number: true #显示行号<br>  tab_replace:<br># Category &amp; Tag #分类和标签<br>default_category: uncategorized #默认分类<br>category_map:<br>tag_map:<br># Archives<br>2: 开启分页<br>1: 禁用分页<br>0: 全部禁用<br>archive: 2<br>category: 2<br>tag: 2<br># Server #本地服务器<br>port: 4000 #端口号<br>server_ip: localhost #IP 地址<br>logger: false<br>logger_format: dev<br># Date / Time format #日期时间格式<br>date_format: YYYY-MM-DD #参考<a href="http://momentjs.com/docs/#/displaying/format/" target="_blank" rel="noopener">http://momentjs.com/docs/#/displaying/format/</a><br>time_format: H:mm:ss<br># Pagination #分页<br>per_page: 10 #每页文章数，设置成 0 禁用分页<br>pagination_dir: page<br># Disqus #Disqus评论，替换为多说<br>disqus_shortname:<br># Extensions #拓展插件<br>theme: landscape-plus #主题<br>exclude_generator:<br>plugins: #插件，例如生成 RSS 和站点地图的<br>- hexo-generator-feed<br>- hexo-generator-sitemap<br># Deployment #部署，将 lmintlcx 改成用户名<br>deploy:<br>  type: git<br>  repo: 刚刚github创库地址.git<br>  branch: master</p>
+<p><img src="/2021/09/21/深度学习总结/Users\29078\AppData\Roaming\Typora\typora-user-images\image-20210921143136412.png" alt="image-20210921143136412"></p>
+<p><img src="/2021/09/21/深度学习总结/Users\29078\AppData\Roaming\Typora\typora-user-images\image-20210921142953011.png" alt="image-20210921142953011"></p>
+<p><img src="/2021/09/21/深度学习总结/Users\29078\AppData\Roaming\Typora\typora-user-images\image-20210921143038754.png" alt="image-20210921143038754"></p>
 </blockquote>
-<h3>五、发表文章 </h3>
-
+<h5 id="解决过拟合"><a href="#解决过拟合" class="headerlink" title="解决过拟合"></a>解决过拟合</h5><hr>
 <blockquote>
-<p>hexo new “name” #新建文章<br>hexo clean #清除缓存 网页正常情况下可以忽略此条命令<br>hexo generate #生成<br>hexo server #启动服务预览，非必要，可本地浏览网页<br>hexo deploy #部署发布</p>
+<p><img src="/2021/09/21/深度学习总结/Users\29078\AppData\Roaming\Typora\typora-user-images\image-20210921143412169.png" alt="image-20210921143412169"></p>
+<p><img src="/2021/09/21/深度学习总结/Users\29078\AppData\Roaming\Typora\typora-user-images\image-20210921143503000.png" alt="image-20210921143503000"></p>
 </blockquote>
-<h3>六、总结 </h3>
-
-<p>到这里，博客的框架基本成型，现在要做的就是修复bug，完善主题，在我的友链中，有很多基于hexo的主题，可以参考使用。</p>
+<h5 id="什么是正则化"><a href="#什么是正则化" class="headerlink" title="什么是正则化"></a>什么是正则化</h5><hr>
+<blockquote>
+<p><img src="/2021/09/21/深度学习总结/Users\29078\AppData\Roaming\Typora\typora-user-images\image-20210921143922327.png" alt="image-20210921143922327"></p>
+</blockquote>
+<h5 id="为什么正则化-权重衰退-可以解决过拟合"><a href="#为什么正则化-权重衰退-可以解决过拟合" class="headerlink" title="为什么正则化(权重衰退)可以解决过拟合"></a>为什么正则化(权重衰退)可以解决过拟合</h5><hr>
+<p><img src="/2021/09/21/深度学习总结/Users\29078\AppData\Roaming\Typora\typora-user-images\image-20210911151629886.png" alt="image-20210911151629886"></p>
+<h5 id="前馈神经网络和反馈神经网络"><a href="#前馈神经网络和反馈神经网络" class="headerlink" title="前馈神经网络和反馈神经网络"></a>前馈神经网络和反馈神经网络</h5><hr>
+<blockquote>
+<p><img src="/2021/09/21/深度学习总结/Users\29078\AppData\Roaming\Typora\typora-user-images\image-20210921145836878.png" alt="image-20210921145836878"></p>
+</blockquote>
+<h5 id="为什么会梯度消失或爆炸"><a href="#为什么会梯度消失或爆炸" class="headerlink" title="为什么会梯度消失或爆炸"></a>为什么会梯度消失或爆炸</h5><hr>
+<blockquote>
+<p><a href="https://blog.csdn.net/ksws0292756/article/details/83479504?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.nolandingword2&amp;spm=1001.2101.3001.4242" target="_blank" rel="noopener">解答</a></p>
+</blockquote>
+<h3 id="二、CNN"><a href="#二、CNN" class="headerlink" title="二、CNN"></a>二、CNN</h3><h5 id="什么是CNN"><a href="#什么是CNN" class="headerlink" title="什么是CNN"></a>什么是CNN</h5><hr>
+<blockquote>
+<p><img src="/2021/09/21/深度学习总结/Users\29078\AppData\Roaming\Typora\typora-user-images\image-20210921144945193.png" alt></p>
+<p><img src="/2021/09/21/深度学习总结/Users\29078\AppData\Roaming\Typora\typora-user-images\image-20210921145017689.png" alt="image-20210921145017689"></p>
+<p>感受野</p>
+<p><img src="/2021/09/21/深度学习总结/Users\29078\AppData\Roaming\Typora\typora-user-images\image-20210921200217208.png" alt="image-20210921200217208"></p>
+</blockquote>
+<h5 id="CNN1-LeNet"><a href="#CNN1-LeNet" class="headerlink" title="CNN1-LeNet"></a>CNN1-LeNet</h5><hr>
+<blockquote>
+<p><a href="https://www.jiqizhixin.com/graph/technologies/6c9baf12-1a32-4c53-8217-8c9f69bd011b" target="_blank" rel="noopener">解析</a></p>
+<p><a href="https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&amp;arnumber=726791&amp;ref=aHR0cHM6Ly9pZWVleHBsb3JlLmllZWUub3JnL2RvY3VtZW50LzcyNjc5MQ==&amp;tag=1" target="_blank" rel="noopener">原文</a></p>
+</blockquote>
+<h5 id="CNN2-AlexNet"><a href="#CNN2-AlexNet" class="headerlink" title="CNN2-AlexNet"></a>CNN2-AlexNet</h5><hr>
+<blockquote>
+<p><a href="https://blog.csdn.net/luoluonuoyasuolong/article/details/81750190" target="_blank" rel="noopener">解析</a></p>
+<p><a href="https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf" target="_blank" rel="noopener">原文</a></p>
+</blockquote>
+<h5 id="CNN3-VGG"><a href="#CNN3-VGG" class="headerlink" title="CNN3-VGG"></a>CNN3-VGG</h5><hr>
+<blockquote>
+<p><a href="https://www.cnblogs.com/wangguchangqing/p/10338560.html" target="_blank" rel="noopener">解析</a></p>
+<p><a href="https://arxiv.org/pdf/1409.1556.pdf" target="_blank" rel="noopener">原文</a></p>
+</blockquote>
+<h5 id="CNN4-NIN"><a href="#CNN4-NIN" class="headerlink" title="CNN4-NIN"></a>CNN4-NIN</h5><hr>
+<blockquote>
+<p><a href="https://blog.csdn.net/For_learning/article/details/114323070?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.nolandingword2&amp;spm=1001.2101.3001.4242" target="_blank" rel="noopener">解析</a></p>
+<p><a href="https://arxiv.org/pdf/1312.4400.pdf" target="_blank" rel="noopener">原文</a></p>
+</blockquote>
+<h5 id="CNN5-GoogLeNet"><a href="#CNN5-GoogLeNet" class="headerlink" title="CNN5-GoogLeNet"></a>CNN5-GoogLeNet</h5><hr>
+<blockquote>
+<p><a href="https://blog.csdn.net/shuzfan/article/details/50738394" target="_blank" rel="noopener">解析</a></p>
+<p><a href="https://arxiv.org/pdf/1409.4842.pdf" target="_blank" rel="noopener">原文</a></p>
+</blockquote>
 
       
 
@@ -262,11 +305,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
         		</li>
       		
 		</ul>
@@ -322,7 +361,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://coderLCJ.github.io/2018/04/01/搭建一个属于自己的博客/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://coderLCJ.github.io/2021/09/21/深度学习总结/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -336,18 +375,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/20/Hexo工具集/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hexo工具集
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/26/我的第一篇文章/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/11/12/在另一台PC使用hexo写博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">在另一台PC上使用hexo</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -392,7 +422,7 @@ if(true){
   	repo: 'gitalk',
   	owner: 'coderLCJ',
   	admin: ['coderLCJ'],
-  	id: 'Sun Apr 01 2018 14:26:22 GMT+0800',
+  	id: 'Tue Sep 21 2021 20:12:19 GMT+0800',
   	distractionFreeMode: 'true'
 })
 gitalk.render('gitalk-container') 
